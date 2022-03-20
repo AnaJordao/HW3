@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -47,7 +47,23 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo', '~> 1.2', '>= 1.2.9'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'fileutils', '~> 1.4'
+gem 'timeout', '~> 0.1'
+gem 'zlib', '~> 1.1'
+gem 'stringio', '~> 0.1'
+gem 'date', '~> 3.0'
+gem 'ipaddr', '~> 1.2'
+gem 'openssl', '~> 2.1', '>= 2.1.3'
+gem 'cgi', '~> 0.1'
+gem 'etc', '~> 1.1'
+gem 'delegate', '~> 0.1'
+gem 'readline-ext', '~> 0.1'
+gem 'strscan', '~> 1.0'
+gem 'io-console', '~> 0.5'
+gem 'forwardable', '~> 1.3'
 
 group :test do
 	gem 'cucumber-rails', :require => false
@@ -55,4 +71,8 @@ group :test do
 	gem 'database_cleaner'
 	gem 'capybara'
 	gem 'launchy'
+  gem 'did_you_mean', '~> 1.6', '>= 1.6.1'
+  gem 'uri', '~> 0.11.0'
 end
+
+
