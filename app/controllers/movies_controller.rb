@@ -31,8 +31,8 @@ class MoviesController < ApplicationController
        session[:ratings] = @selected_ratings
        redirect_to :sort => sort, :ratings => @selected_ratings and return
      end
-    @movies = Movie.order(ordering)
-    #@movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
+    #@movies = Movie.order(ordering)
+    @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
   
   end
 
